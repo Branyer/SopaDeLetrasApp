@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Sopa de Letras</string>
+    <string name="titulo">Sopa de Letras</string>
+    <string name="continuar">Continuar</string>
+    <string name="juego_nuevo">Juego Nuevo</string>
+    <string name="salir">Salir</string>
+    <string name="nombre">¿Cuál es tu nombre?</string>
+    <string name="comenzar">Comenzar</string>
+</resources>

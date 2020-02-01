@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dato_name"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activitys.FormActivity">
+
+    <TextView
+        android:id="@+id/txt_pregunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="75dp"
+
+
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="124dp"
+        android:background="@drawable/titulo"
+        android:text="@string/nombre" />
+
+    <EditText
+        android:id="@+id/dato_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_pregunta"
+        android:layout_alignStart="@+id/txt_pregunta"
+        android:layout_alignLeft="@+id/txt_pregunta"
+        android:layout_marginStart="-16dp"
+        android:layout_marginLeft="-16dp"
+        android:layout_marginTop="45dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/comenzar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dato_nombre"
+        android:layout_alignStart="@+id/dato_nombre"
+        android:layout_alignLeft="@+id/dato_nombre"
+        android:layout_marginStart="59dp"
+        android:layout_marginLeft="59dp"
+        android:layout_marginTop="54dp"
+        android:background="@drawable/redondeo"
+        android:text="@string/comenzar" />
+
+
+</RelativeLayout>
