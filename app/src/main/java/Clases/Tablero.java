@@ -43,19 +43,19 @@ public class Tablero  {
 
     private int row;
     private int col;
-    private Button  [][] matBut;
-    private int  [][]matInt;
-    private int [][]matCompletados;
-    private List <String>palabrasBus;
-    private  List <String> palabrasEnc;
-    private  List <String> palabrasNoEnc;
+    private Button  [][] matBut; //Matriz de Botones
+    private int  [][]matInt; //Matriz que guarda los botones que estan seleccionados
+    private int [][]matCompletados; //Matirz que guarda los botones que ya formaron una palabra
+    private List <String>palabrasBus; //Lista para guardar las palabras a buscar
+    private  List <String> palabrasEnc; //Lista que guarda las Palabras Encontradas
+    private  List <String> palabrasNoEnc; //Lista que guarda las Palabras No Encontradas
     private List PalabraSelec = new LinkedList();
     private List <Punto>Points = new LinkedList<Punto>();
     private int direccion=0;
     private  int iter = 0;
     private List<Punto> comienzoPalabras;
     private List<Puntos> direccionPalabras;
-    private List Colors;
+    private List Colors; //Lista de los colores posibles
 
 
     public Tablero(){ }
@@ -494,7 +494,7 @@ public class Tablero  {
                                 if(palabrasBus.get(j).equals(palabra1) ||palabrasBus.get(j).equals(palabra2)){
                                     enc=1;
                                     palabrasEnc.add(palabrasBus.get(j));
-                                    Toast.makeText(context, "Encontraste la palabra: " + palabrasBus.get(j), Toast.LENGTH_SHORT).show();
+                                    //Toast.makeText(context, "Encontraste la palabra: " + palabrasBus.get(j), Toast.LENGTH_SHORT).show();
                                     tv2.setText("");
                                     palabrasNoEnc.remove(palabrasBus.get(j));
                                     int encBus=0;
@@ -506,11 +506,11 @@ public class Tablero  {
                                                 break;
                                             }
                                         }
-                                        if(encBus==0)tv2.setText(tv2.getText() + " "+ (m+1) + "." + palabrasBus.get(m));
+                                        if(encBus==0)tv2.setText(tv2.getText() + "  "+ (m+1) + "." + palabrasBus.get(m));
                                         if((m+1)%3==0)tv2.setText(tv2.getText() + "\n");
                                     }
                                     if(palabrasEnc.size()==palabrasBus.size()){
-                                        Toast.makeText(context, "Completaste el nivel " + (row-6), Toast.LENGTH_LONG).show();
+                                        Toast.makeText(context, "Completaste el nivel " + (row-6), Toast.LENGTH_SHORT).show();
                                         cambiar_nivel((row-6), activity);
 
                                     }
